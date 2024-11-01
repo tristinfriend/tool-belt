@@ -18,7 +18,7 @@ def fibGenerator(fibSize):
 # Last function you should define is the main function
 def main():
     print(countEvens([4,6,1,3,9,10]))
-    print(countEvens([4,6,100,0,9,10])
+    print(countEvens([4,6,100,0,9,10]))
 
 
 # Call the main function at the global level
