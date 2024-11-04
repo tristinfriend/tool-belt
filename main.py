@@ -41,6 +41,7 @@ print(is_palindrome("A man, a plan, a canal, Panama"))
 
 print("------")
 
+#fibGenerator
 def fibGenerator(size):
     if size < 2:
         return []
