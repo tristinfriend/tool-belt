@@ -26,3 +26,18 @@ def countLarger(numArray, x):
 numArray = [8, 12, 40, 10]
 numLarger = countLarger(numArray, 10)
 print(numLarger) 
+
+print ("------")
+
+#isPalindrome
+def is_palindrome(s): 
+    cleaned_str = ''.join(char.lower() for char in s if char.isalnum())
+    return cleaned_str == cleaned_str[::-1]
+
+print(is_palindrome("madam"))
+print(is_palindrome("racecar"))
+print(is_palindrome("hello"))
+print(is_palindrome("A man, a plan, a canal, Panama"))
+
+print("------")
+
