@@ -38,14 +38,14 @@ print(countLarger(nums))
 print ("------")
 
 #isPalindrome
-def is_palindrome(s): 
-    cleaned_str = ''.join(char.lower() for char in s if char.isalnum())
-    return cleaned_str == cleaned_str[::-1]
+def isPalindrome(num):
+    num_str = str(num)
+    return num_str == num_str[::-1]
 
-print(is_palindrome("madam"))
-print(is_palindrome("racecar"))
-print(is_palindrome("hello"))
-print(is_palindrome("A man, a plan, a canal, Panama"))
+print(isPalindrome(121))
+print(isPalindrome(-121))
+print(isPalindrome(12321))
+print(isPalindrome(123))
 
 print("------")
 
