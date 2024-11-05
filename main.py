@@ -20,12 +20,20 @@ print(x)
 print("------")
 
 # countLarger
-def countLarger(numArray, x):
-    return sum(1 for num in numArray if num > x)
+def countLarger(nums):
+    result = []
+    n = len(nums)
 
-numArray = [8, 12, 40, 10]
-numLarger = countLarger(numArray, 10)
-print(numLarger) 
+    for i in range(n):
+        count = 0 
+        for j in range(i + 1, n):
+            if nums[j] > nums[i]:
+                count +=1
+        result.append(count)
+    return result
+
+nums = [5, 2, 6, 1]
+print(countLarger(nums))
 
 print ("------")
 
@@ -42,18 +50,22 @@ print(is_palindrome("A man, a plan, a canal, Panama"))
 print("------")
 
 #fibGenerator
-def fibGenerator(size):
-    if size < 2:
-        return []
-    
-    fib_sequence = [0,1]
+def fibGenerator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a +b
 
-    while len(fib_sequence) < size:
-        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+fib = fibGenerator()
+fib_numbers = []
 
-    return fib_sequence
+while len(fib_numbers) < 11:
+    num = next(fib)
+    if num > 10:
+        fib_numbers.append(num)
 
-print(fibGenerator(10))
-print(fibGenerator(12))
+print(fib_numbers)
 
 print("------")
+
+# Main
