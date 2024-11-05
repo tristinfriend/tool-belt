@@ -6,7 +6,7 @@ Professor Troy Shotter
 10/21/2024
 '''
 
-# countEvens
+#countEvens
 def countEven (alist):
     c = 0
     for i in alist:
@@ -69,3 +69,11 @@ print(fib_numbers)
 print("------")
 
 # Main
+def main(): 
+    print(countEven([2,3,4]))
+    print(countLarger([5,2,6,1]))
+    print(isPalindrome(121))
+    print(isPalindrome(-121))
+    print(isPalindrome(12321))
+    print(isPalindrome(123))
+    print(fibGenerator(11))
