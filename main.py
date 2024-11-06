@@ -6,7 +6,7 @@ Professor Troy Shotter
 10/21/2024
 '''
 
-#countEvens
+# countEvens
 def countEven (alist):
     c = 0
     for i in alist:
@@ -37,7 +37,7 @@ print(countLarger(nums))
 
 print ("------")
 
-#isPalindrome
+# isPalindrome
 def isPalindrome(num):
     num_str = str(num)
     return num_str == num_str[::-1]
@@ -49,7 +49,7 @@ print(isPalindrome(123))
 
 print("------")
 
-#fibGenerator
+# fibGenerator
 def fibGenerator():
     a, b = 0, 1
     while True:
