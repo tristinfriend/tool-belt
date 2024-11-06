@@ -7,53 +7,39 @@ Professor Troy Shotter
 '''
 
 # countEvens
-def countEven (alist):
-    c = 0
-    for i in alist:
+def countEvens (aArray):
+    Ec = 0
+    for i in aArray:
         if i % 2 == 0:
-            c += 1
-    return c 
-
-x = countEven([2,3,4])
-print(x)
-
-print("------")
+            Ec += 1
+    return Ec
 
 # countLarger
-def countLarger(nums):
-    result = []
-    n = len(nums)
-
-    for i in range(n):
-        count = 0 
-        for j in range(i + 1, n):
-            if nums[j] > nums[i]:
-                count +=1
-        result.append(count)
-    return result
-
-nums = [5, 2, 6, 1]
-print(countLarger(nums))
-
-print ("------")
+def countLarger(numArray, x):
+    cL = 0
+    for i in (numArray):
+        if i > x:
+            cL += 1
+    return cL
 
 
 # isPalindrome
-def isPalindrome(num):
-    num_str = str(num)
-    return num_str == num_str[::-1]
-
-print(isPalindrome(121))
-print(isPalindrome(-121))
-print(isPalindrome(12321))
-print(isPalindrome(123))
-
-print("------")
+def isPalindrome(aString):
+    aString = aString.lower()
+    stringSize = len(aString)
+    for i in range (stringSize):
+        x = (aString[stringSize-i-1])
+        y = (aString [i])
+        if x != y:
+            return False
+    return True
 
 # fibGenerator
 def fibGenerator(size):
-    fib_numbers = []
+    fib_numbers = [0,1]
     a, b = 0, 1  
+    if size < 2:
+        return []
     while len(fib_numbers) < size:
         c = a + b
         fib_numbers.append(c)
@@ -62,16 +48,16 @@ def fibGenerator(size):
 
     return fib_numbers
 
-print("------")
-
 # Main
-def main(): 
-    print(countEven([2,3,4]))
-    print(countLarger([5,2,6,1]))
-    print(isPalindrome(121))
-    print(isPalindrome(-121))
-    print(isPalindrome(12321))
-    print(isPalindrome(123))
-    print(fibGenerator(11))
+def main():
+    print(countEvens([4,6,1,3,9,10]))
+    print(countEvens([4,6,100,0,9,10]))
+    print(countLarger([1,100,80,20],20))
+    print(countLarger([1,5,4,80,20],20))
+    print(isPalindrome("Racecar"))
+    print(isPalindrome("HelloWorld"))
+    print(fibGenerator(1))
+    print(fibGenerator(10))
+    print(fibGenerator(15))
 
 main()
