@@ -50,21 +50,16 @@ print(isPalindrome(123))
 print("------")
 
 # fibGenerator
-def fibGenerator():
-    a, b = 0, 1
-    while True:
-        yield a
-        a, b = b, a +b
+def fibGenerator(size):
+    fib_numbers = []
+    a, b = 0, 1  
+    while len(fib_numbers) < size:
+        c = a + b
+        fib_numbers.append(c)
+        a=b
+        b=c 
 
-fib = fibGenerator()
-fib_numbers = []
-
-while len(fib_numbers) < 11:
-    num = next(fib)
-    if num > 10:
-        fib_numbers.append(num)
-
-print(fib_numbers)
+    return fib_numbers
 
 print("------")
 
@@ -77,3 +72,5 @@ def main():
     print(isPalindrome(12321))
     print(isPalindrome(123))
     print(fibGenerator(11))
+
+main()
