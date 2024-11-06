@@ -37,6 +37,7 @@ print(countLarger(nums))
 
 print ("------")
 
+
 # isPalindrome
 def isPalindrome(num):
     num_str = str(num)
